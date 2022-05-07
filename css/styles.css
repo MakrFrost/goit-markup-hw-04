@@ -410,17 +410,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+.icon-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+
+  list-style-type: none;
+}
+
+.icon-item:last-child {
+  margin-right: 0px;
 }
 
 .link-team {
-  margin-right: 10px;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
 
   fill: var(--icon-color);
 }
 
 .link-team:hover,
-.link-team:active {
+.link-team:active,
+.link-team:focus {
   border-radius: 50%;
   fill: var(--color-white);
   background: var(--accent-color);
@@ -474,7 +494,9 @@ body {
 }
 
 .client-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   padding: 16px 32px;
 
@@ -488,7 +510,8 @@ body {
 }
 
 .client-link:hover,
-.client-link:active {
+.client-link:active,
+.client-link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -508,6 +531,7 @@ body {
 
 .flex-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -583,8 +607,6 @@ body {
 .footer-social {
   display: block;
   margin-right: auto;
-  height: 80px;
-  width: 206px;
 }
 
 .social-title {
@@ -597,7 +619,6 @@ body {
 
   margin: 0;
   margin-bottom: 20px;
-  margin-top: 14px;
 }
 
 .social-list {
@@ -610,8 +631,12 @@ body {
 }
 
 .social-item {
-  margin: 0;
+  margin-right: 10px;
   padding: 0;
+}
+
+.social-item:last-child {
+  margin-right: 0px;
 }
 
 .link-footer {
@@ -628,7 +653,8 @@ body {
 }
 
 .link-footer:hover,
-.link-footer:active {
+.link-footer:active,
+.link-footer:focus {
   background-color: var(--accent-color);
 }
 
@@ -702,10 +728,6 @@ body {
   margin-top: 0;
 }
 
-.works-list a {
-  text-decoration: none;
-}
-
 .works-item {
   list-style-type: none;
   width: 370px;
@@ -713,8 +735,15 @@ body {
   margin-bottom: 30px;
 }
 
-.works-item:hover,
-.works-item:focus {
+.works-link {
+  display: block;
+
+  text-decoration: none;
+}
+
+.works-link:hover,
+.works-link:focus,
+.works-link:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
